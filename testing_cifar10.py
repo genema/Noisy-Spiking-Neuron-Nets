@@ -1,8 +1,8 @@
 '''
 Author: ----
 Date: 2022-06-14 19:48:48
-LastEditors: ----
-LastEditTime: 2022-08-26 19:29:50
+LastEditors: GhMa
+LastEditTime: 2022-09-05 15:10:42
 '''
 import torch
 import torch.nn as nn
@@ -142,31 +142,6 @@ def net_init(args, ):
     net.load_state_dict(checkpoint['net'])
     net = net.module
     return net, checkpoint
-
-
-def additive_gaussian(clean_samples, args):
-    noise = torch.zeros_like(clean_samples).normal_(
-        mean=0, std=args.gaussian_sigma)
-    return clean_samples + noise
-
-
-def multiplicative_gaussian(clean_samples, args):
-    noise = torch.zeros_like(clean_samples).normal_(
-        mean=1, std=args.gaussian_sigma)
-    return clean_samples * noise
-
-
-def salt_pepper_noise(clean_samples, args):
-    bsz = clean_samples.size(0)
-    w, h = clean_samples.size(-1), clean_samples.size(-2)
-    for b in range(bsz):
-        salt_idx = torch.randint(0, w*h, [int(w*h * args.sp_alpha * 0.5)]).long()
-        pepper_idx = torch.randint(0, w*h, [int(w*h * args.sp_alpha * 0.5)]).long()
-        
-        clean_samples[b, :, torch.div(salt_idx, w).long(), salt_idx % w] = 1
-        clean_samples[b, :, torch.div(pepper_idx, w).long(), pepper_idx % w] = 0
-            
-    return clean_samples
 
 
 def spike_noise_hook(m, input, output):
@@ -371,13 +346,7 @@ def test():
     for batch_idx, (inputs, targets) in enumerate(testloader):
         inputs, targets = inputs.to(device), targets.to(device)
             
-        if args.perturbation == 'add_gaussian' and args.gaussian_sigma > 0:
-            inputs = additive_gaussian(inputs, args)
-        elif args.perturbation == 'multi_gaussian' and args.gaussian_sigma > 0:
-            inputs = multiplicative_gaussian(inputs, args)
-        elif args.perturbation == 'sp' and args.sp_alpha > 0:
-            inputs = salt_pepper_noise(inputs, args)
-        elif args.perturbation == 'adversarial' and args.adv_gamma > 0:
+        if args.perturbation == 'adversarial' and args.adv_gamma > 0:
             inputs = attacker.make_adversarial_example(inputs, targets)
 
         net.T = args.timestep
