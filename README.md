@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-09-05 15:28:01
 -->
 # Repo of Noisy Spiking Neural Networks.
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=genema)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=genema
 * Package requirements in 'requirements.txt'
 
 * Training commands in 'run_training.sh'
