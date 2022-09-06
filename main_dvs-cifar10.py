@@ -2,7 +2,7 @@
 Author: ----
 Date: 2022-06-14 21:19:30
 LastEditors: ----
-LastEditTime: 2022-08-12 23:36:53
+LastEditTime: 2022-09-06 15:16:39
 '''
 import torch
 import torch.nn as nn
@@ -255,15 +255,6 @@ def test(epoch, writer, path):
             inputs, targets = inputs.to(device), targets.to(device)
             
             net.T = 10
-            '''
-            if args.neuron == 'NILIF':
-                outputs = 0
-                n_ensembles = 1
-                for _ in range(n_ensembles):
-                    outputs += net(inputs).mean(1)
-                outputs /= n_ensembles
-            else:
-            '''
             outputs = net(inputs).mean(1)
             
             loss = criterion(outputs, targets)

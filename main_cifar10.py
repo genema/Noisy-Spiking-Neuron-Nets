@@ -2,7 +2,7 @@
 Author: ----
 Date: 2022-04-16 11:47:44
 LastEditors: ----
-LastEditTime: 2022-08-18 11:12:50
+LastEditTime: 2022-09-06 15:16:25
 '''
 import torch
 import torch.nn as nn
@@ -279,15 +279,6 @@ def test(epoch, writer, path):
             
             net.T = args.timestep
             inputs = inputs.unsqueeze_(1).repeat(1, args.timestep, 1, 1, 1)
-            """ 
-            if args.neuron == 'NILIF':
-                outputs = 0
-                n_ensembles = 1
-                for _ in range(n_ensembles):
-                    outputs += net(inputs).mean(1)
-                outputs /= n_ensembles
-            else: 
-            """
             outputs = net(inputs).mean(1)
             
             loss = criterion(outputs, targets)

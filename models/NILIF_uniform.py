@@ -2,7 +2,7 @@
 Author: ----
 Date: 2022-06-30 11:56:44
 LastEditors: ----
-LastEditTime: 2022-07-19 16:49:36
+LastEditTime: 2022-09-06 15:22:15
 '''
 import torch
 import torch.nn as nn
@@ -73,13 +73,9 @@ class Neuron(nn.Module):
         for t in range(timestep):
             self.u = self.tau * self.u + x[:, t, ...]
             u_ = self.u
-            # additive noise
             self.u += -torch.zeros_like(self.u).uniform_(-self.a, self.a)
 
-            # if self.training:
             self.o[:, t, ...] = nilif_act_fun(self.u - self.threshold, self.a)
-            # else:
-            #    self.o[:, t, ...] = heaviside(self.u - self.threshold)
 
             self.u = self.u * (1 - self.o[:, t, ...]) 
     
@@ -94,7 +90,6 @@ class Neuron(nn.Module):
     def _reset(self):
         self.u  = None
         self.o  = None
-        # self.o_ = None
     
     def _states(self):
         return self.u, self.o
@@ -102,12 +97,8 @@ class Neuron(nn.Module):
     def forward(self, x, out_u=False):
         self.u = 0
         self.o = torch.zeros_like(x) 
-        # self.o_ = torch.zeros_like(x)
         if out_u:
             return self._silent_update(x)
         else:
             self._update(x)
-            # if self.training:  # principled stochastic inference 
             return self.o
-            # else:  # this corresponds to deterministic inference with noise 
-            #     return self.o_

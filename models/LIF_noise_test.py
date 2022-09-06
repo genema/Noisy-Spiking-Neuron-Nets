@@ -2,7 +2,7 @@
 Author: ----
 Date: 2022-07-20 16:43:38
 LastEditors: ----
-LastEditTime: 2022-07-20 21:02:53
+LastEditTime: 2022-09-06 15:19:37
 '''
 import torch
 import torch.nn as nn
@@ -122,8 +122,6 @@ class Neuron(nn.Module):
         timestep = x.size(1)
         for t in range(timestep):
             self.u = self.tau * self.u + x[:, t, ...]
-            # membrane potential-level background noise, the idle parameter sigma 
-            # is used as the std of the noise. 
             self.u += -torch.normal(
                 torch.ones_like(self.u) * 0, self.sigma
             ) 

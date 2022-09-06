@@ -2,7 +2,7 @@
 Author: ----
 Date: 2022-04-07 20:48:43
 LastEditors: ----
-LastEditTime: 2022-08-26 19:18:28
+LastEditTime: 2022-09-06 15:17:48
 '''
 import torch
 import torchvision
@@ -91,47 +91,6 @@ def prepare_cifar10(args, autoaugment=True):
 
     testset = torchvision.datasets.CIFAR10(
         root='/home/----/exd1/data/cifar10', 
-        train=False, download=True, transform=transform_test)
-    testloader = torch.utils.data.DataLoader(
-        testset, batch_size=args.minibatch, shuffle=False, num_workers=args.workers)
-    return trainloader, testloader
-
-
-def prepare_cifar100(args, autoaugment=True):
-    print('==> Preparing CIFAR-100 data..')
-    if autoaugment:
-        print('>>> Auto Augmentation')
-        transform_train = transforms.Compose([
-            transforms.RandomCrop(32, padding=4),
-            transforms.RandomHorizontalFlip(),
-            transforms.autoaugment.AutoAugment(
-                policy=transforms.autoaugment.AutoAugmentPolicy.CIFAR10
-            ),
-            transforms.ToTensor(),
-            transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
-        ])
-    else:
-        transform_train = transforms.Compose([
-            transforms.RandomCrop(32, padding=4),
-            transforms.RandomHorizontalFlip(),
-            transforms.RandomRotation(15),
-            transforms.ToTensor(),
-            transforms.Normalize((0.5071, 0.4867, 0.4408), (0.2675, 0.2565, 0.2761)),
-        ])
-
-    transform_test = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Normalize((0.5071, 0.4867, 0.4408), (0.2675, 0.2565, 0.2761)),
-    ])
-
-    trainset = torchvision.datasets.CIFAR100(
-        root='/home/----/exd1/data/cifar100', 
-        train=True, download=True, transform=transform_train)
-    trainloader = torch.utils.data.DataLoader(
-        trainset, batch_size=args.minibatch, shuffle=True, num_workers=args.workers)
-
-    testset = torchvision.datasets.CIFAR100(
-        root='/home/----/exd1/data/cifar100', 
         train=False, download=True, transform=transform_test)
     testloader = torch.utils.data.DataLoader(
         testset, batch_size=args.minibatch, shuffle=False, num_workers=args.workers)

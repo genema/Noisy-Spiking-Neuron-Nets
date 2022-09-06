@@ -3,7 +3,7 @@
  # @Author: ----
  # @Date: 2022-04-06 15:47:35
  # @LastEditors: ----
- # @LastEditTime: 2022-09-05 14:56:55
+ # @LastEditTime: 2022-09-06 15:19:01
 ###
 # ----server
 
@@ -13,4 +13,4 @@ MY_PYTHON="python"  # default python exe
 
 
 #220820
-$MY_PYTHON main_cifar10_debug.py --neuron NILIF --reg no --model sresnet19 --epochs 300 --minibatch 128 --timestep 4 --seed 2 --lr 0.003 --sigma 0.3
+$MY_PYTHON main_cifar10.py --neuron NILIF --reg no --model sresnet19 --epochs 300 --minibatch 256 --timestep 2 --seed 2 --lr 0.003 --sigma 0.3

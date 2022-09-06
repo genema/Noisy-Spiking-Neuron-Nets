@@ -160,27 +160,6 @@ def visualize_grad_norms(model, writer, idx, norm_type=2, step_size=None):
                 for n, p in m.named_parameters():
                     writer.add_histogram('grad / '+name+n, p.grad, idx)
             fc_counter += 1
-    """ conv_counter = 0
-    fc_counter = 0
-    for m in model.modules():
-        if isinstance(m, nn.Conv2d):
-            conv_counter += 1
-            grad_norm = get_grad_norm(
-                m.parameters(), norm_type=norm_type, step_size=step_size
-            )
-            writer.add_scalar(
-                'grad norm Conv Layers / conv {}'.format(conv_counter),
-                grad_norm, idx
-            )
-        elif isinstance(m, nn.Linear):
-            fc_counter += 1
-            grad_norm = get_grad_norm(
-                m.parameters(), norm_type=norm_type, step_size=step_size
-            )
-            writer.add_scalar(
-                'grad norm FC Layers / fc {}'.format(fc_counter),
-                grad_norm, idx
-            ) """
 
 
 def get_weight_norm(model_parameters, norm_type='fro'):
@@ -217,23 +196,6 @@ def visualize_weight_norms(model, writer, idx, norm_type='fro'):
                 for n, p in m.named_parameters():
                     writer.add_histogram('param / '+name+n, p, idx)
             fc_counter += 1
-    """ conv_counter = 0
-    fc_counter = 0
-    for m in model.modules():
-        if isinstance(m, nn.Conv2d):
-            conv_counter += 1
-            weight_norm = get_weight_norm(m.parameters())
-            writer.add_scalar(
-                'w norm Conv Layers / conv {}'.format(conv_counter),
-                weight_norm, idx
-            )
-        elif isinstance(m, nn.Linear):
-            fc_counter += 1
-            weight_norm = get_weight_norm(m.parameters())
-            writer.add_scalar(
-                'w norm FC Layers / fc {}'.format(fc_counter),
-                weight_norm, idx
-            ) """
 
 
 class Monitor:
