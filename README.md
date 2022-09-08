@@ -12,7 +12,7 @@
 
 ### Tips
 
-* Package requirements are listed in `requirements.txt`.
+* Conf file of our software environment: `requirements.txt`.
 * test scipts: `testing_dataset.py`.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
