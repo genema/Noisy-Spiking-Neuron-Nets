@@ -202,7 +202,6 @@ six=1.16.0=pyhd3eb1b0_1
 sklearn=0.0=pypi_0
 sniffio=1.2.0=pypi_0
 soundfile=0.10.3.post1=pypi_0
-spikingjelly=0.0.0.0.10=pypi_0
 sqlite=3.37.2=hc218d9a_0
 stack_data=0.2.0=pyhd8ed1ab_0
 style=1.1.0=pypi_0
