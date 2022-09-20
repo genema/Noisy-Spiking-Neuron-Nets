@@ -1,8 +1,8 @@
 '''
 Author: ----
 Date: 2022-06-30 11:22:52
-LastEditors: ----
-LastEditTime: 2022-09-06 15:21:49
+LastEditors: GhMa
+LastEditTime: 2022-09-20 14:35:24
 '''        
 import torch
 import torch.nn as nn
@@ -17,7 +17,6 @@ def heaviside(x: torch.Tensor):
 
 class StochasticST(torch.autograd.Function):
     r"""
-    Stochastic straight-through gradient estimator
     The noise type here is sigmoid noise. 
     """
     @staticmethod

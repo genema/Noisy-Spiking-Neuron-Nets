@@ -1,8 +1,8 @@
 '''
 Author: ----
 Date: 2022-06-30 11:56:44
-LastEditors: ----
-LastEditTime: 2022-09-06 15:21:18
+LastEditors: GhMa
+LastEditTime: 2022-09-20 14:35:29
 '''
 import torch
 import torch.nn as nn
@@ -24,7 +24,6 @@ def triang(x, a):
 
 class StochasticST(torch.autograd.Function):
     r"""
-    Stochastic straight-through gradient estimator
     The noise type here is triangular noise. 
     """
     @staticmethod
