@@ -1,8 +1,8 @@
 '''
 Author: ----
 Date: 2022-06-14 21:19:30
-LastEditors: ----
-LastEditTime: 2022-09-06 15:16:39
+LastEditors: GhMa
+LastEditTime: 2022-09-20 13:37:46
 '''
 import torch
 import torch.nn as nn
@@ -178,8 +178,8 @@ def train(epoch, writer, scheduler, args):
     net.train()
     train_loss = 0
     other_loss = 0
-    correct = 0
-    total = 0
+    correct    = 0
+    total      = 0
     if args.plot_spike_rate:
         monitor = Monitor(net)
         monitor.enable()
@@ -245,8 +245,8 @@ def test(epoch, writer, path):
     global best_acc
     net.eval()
     test_loss = 0
-    correct = 0
-    total = 0
+    correct   = 0
+    total     = 0
     if args.plot_spike_rate:
         monitor = Monitor(net)
         monitor.enable()
