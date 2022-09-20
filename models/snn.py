@@ -1,8 +1,8 @@
 '''
 Author: ----
 Date: 2022-04-08 11:09:07
-LastEditors: ----
-LastEditTime: 2022-08-12 20:05:48
+LastEditors: GhMa
+LastEditTime: 2022-09-20 18:14:27
 '''
 import torch
 import torch.nn as nn
@@ -560,13 +560,19 @@ class BasicConvLayer(nn.Module):
         in_plane, out_plane,
         kernel_size, stride, padding,
         spiking_neuron=None,
+        norm_layer=True,
         **kwargs
     ):
         super(BasicConvLayer, self).__init__()
-        self.fwd = Seq2ANN(
-            nn.Conv2d(in_plane, out_plane, kernel_size, stride, padding),
-            nn.BatchNorm2d(out_plane)
-        )
+        if norm_layer:
+            self.fwd = Seq2ANN(
+                nn.Conv2d(in_plane, out_plane, kernel_size, stride, padding),
+                nn.BatchNorm2d(out_plane)
+            )
+        else:
+            self.fwd = Seq2ANN(
+                nn.Conv2d(in_plane, out_plane, kernel_size, stride, padding),
+            )
         self.sn = spiking_neuron(**kwargs)
 
     def forward(self, x):
@@ -674,13 +680,13 @@ class CIFARNet(nn.Module):
         super(CIFARNet, self).__init__()
         pool = Seq2ANN(nn.AvgPool2d(2))
         self.features = nn.Sequential(
-            BasicConvLayer(n_input[0], 128, 3, 1, 1, spiking_neuron, **kwargs),
-            BasicConvLayer(128, 256, 3, 1, 1, spiking_neuron, **kwargs),
+            BasicConvLayer(n_input[0], 128, 3, 1, 1, spiking_neuron, False, **kwargs),
+            BasicConvLayer(128, 256, 3, 1, 1, spiking_neuron, False, **kwargs),
             pool,
-            BasicConvLayer(256, 512, 3, 1, 1, spiking_neuron, **kwargs),
+            BasicConvLayer(256, 512, 3, 1, 1, spiking_neuron, False, **kwargs),
             pool,
-            BasicConvLayer(512, 1024, 3, 1, 1, spiking_neuron, **kwargs),
-            BasicConvLayer(1024, 512, 3, 1, 1, spiking_neuron, **kwargs),
+            BasicConvLayer(512, 1024, 3, 1, 1, spiking_neuron, False, **kwargs),
+            BasicConvLayer(1024, 512, 3, 1, 1, spiking_neuron, False, **kwargs),
         )
         W = int(32 / 2 / 2)
         self.classifier = nn.Sequential(
