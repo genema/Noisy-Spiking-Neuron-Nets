@@ -2,7 +2,7 @@
  * @Author: ----
  * @Date: 2022-04-09 11:57:47
  * @LastEditors: GhMa
- * @LastEditTime: 2022-09-20 14:34:40
+ * @LastEditTime: 2022-09-20 15:09:24
 -->
 # Repo of Noisy Spiking Neural Networks.
 ## Usage
@@ -17,6 +17,6 @@
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
 ### Disclaimer
-* Part of our implementations references those in **"STCA: Spatio-temporal credit assignment with delayed feedback in deep spiking neural networks." IJCAI. 2019**.
+* Part of our implementations references those in ***"STCA: Spatio-temporal credit assignment with delayed feedback in deep spiking neural networks." IJCAI. 2019***.
 
 
