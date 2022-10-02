@@ -1,8 +1,8 @@
 '''
 Author: ----
 Date: 2022-04-06 10:57:29
-LastEditors: ----
-LastEditTime: 2022-08-02 14:11:31
+LastEditors: GhMa
+LastEditTime: 2022-10-02 19:24:00
 '''
 import torch
 import torch.nn as nn
@@ -41,10 +41,10 @@ class tdLayer(nn.Module):
         return x
 
 
-class tdBN(nn.Module):
+class BN(nn.Module):
     def __init__(self, c_out):
-        super(tdBN, self).__init__()
-        self.tdbn = Seq2ANN(nn.BatchNorm2d(c_out))
+        super(BN, self).__init__()
+        self.bn = Seq2ANN(nn.BatchNorm2d(c_out))
 
     def forward(self, x):
-        return self.tdbn(x)
+        return self.bn(x)

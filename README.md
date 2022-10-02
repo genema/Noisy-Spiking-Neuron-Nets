@@ -2,13 +2,13 @@
  * @Author: ----
  * @Date: 2022-04-09 11:57:47
  * @LastEditors: GhMa
- * @LastEditTime: 2022-09-20 15:09:24
+ * @LastEditTime: 2022-10-02 19:35:49
 -->
 # Repo of Noisy Spiking Neural Networks.
 ## Usage
 
 * modify dataset path in `dataset_utils.py`.
-* to train a model, run commands in `run_training.sh` script. 
+* to train a model, run example commands in `run_training.sh` script. 
 
 ### Tips
 * **Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may use noisy networks in your code by importing our  noisy neurons in `models` folder.**

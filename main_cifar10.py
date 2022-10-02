@@ -2,7 +2,7 @@
 Author: ----
 Date: 2022-04-16 11:47:44
 LastEditors: GhMa
-LastEditTime: 2022-09-20 13:37:30
+LastEditTime: 2022-10-02 19:25:28
 '''
 import torch
 import torch.nn as nn
@@ -76,12 +76,12 @@ parser.add_argument('--resume', '-r', action='store_true',
                     help='resume from checkpoint')
 parser.add_argument('--debug', action='store_true',
                     help='if debug is true, formal log files will not be created')
-parser.add_argument('--notdbn', action='store_true', help='disable tdBN')
+parser.add_argument('--nobn', action='store_true', help='disable BN')
 args = parser.parse_args()
 
 args.reg = False if args.reg not in ['gram', 'srip'] else args.reg
 args.lambda1 = 0 if not args.reg else args.lambda1
-norm_layer_type = 'tdbn' if not args.notdbn else None
+norm_layer_type = 'bn' if not args.nobn else None
 
 basic_neuron = importlib.import_module('models.' + args.neuron).Neuron
 

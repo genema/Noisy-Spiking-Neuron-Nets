@@ -2,11 +2,11 @@
 Author: ----
 Date: 2022-04-08 11:09:07
 LastEditors: GhMa
-LastEditTime: 2022-09-20 18:14:27
+LastEditTime: 2022-10-02 19:26:00
 '''
 import torch
 import torch.nn as nn
-from .snn_modules import tdLayer, tdBN, Seq2ANN
+from .snn_modules import tdLayer, BN, Seq2ANN
 
 
 def reset_snn(net: nn.Module):
@@ -38,12 +38,12 @@ class BasicBlock(nn.Module):
         self, 
         inplanes, planes, 
         stride=1, downsample=None, groups=1,
-        base_width=64, dilation=1, norm_layer='tdbn', 
+        base_width=64, dilation=1, norm_layer='bn', 
         spiking_neuron: callable = None, **kwargs
     ):
         super(BasicBlock, self).__init__()
-        if norm_layer == 'tdbn':
-            norm_layer = tdBN
+        if norm_layer == 'bn':
+            norm_layer = BN
         if groups != 1:
             raise ValueError('BasicBlock only supports groups=1 and base_width=64')
         if dilation > 1:
@@ -92,14 +92,14 @@ class SpikingResNet(nn.Module):
         groups=1, 
         width_per_group=64, 
         replace_stride_with_dilation=None,
-        norm_layer='tdbn', 
+        norm_layer='bn', 
         spiking_neuron: callable = None, 
         n_input = [3, 32, 32],
         **kwargs
     ):
         super(SpikingResNet, self).__init__()
-        if norm_layer == 'tdbn':
-            norm_layer = tdBN
+        if norm_layer == 'bn':
+            norm_layer = BN
         self._norm_layer = norm_layer
         self.in_dim = n_input
         self.inplanes = 64
@@ -261,14 +261,14 @@ class SpikingResNet_type2(nn.Module):
         groups=1, 
         width_per_group=64, 
         replace_stride_with_dilation=None,
-        norm_layer='tdbn', 
+        norm_layer='bn', 
         spiking_neuron: callable = None, 
         n_input = [3, 32, 32],
         **kwargs
     ):
         super(SpikingResNet_type2, self).__init__()
-        if norm_layer == 'tdbn':
-            norm_layer = tdBN
+        if norm_layer == 'bn':
+            norm_layer = BN
         self._norm_layer = norm_layer
         self.in_dim = n_input
         self.inplanes = 64
@@ -475,7 +475,7 @@ def spiking_resnet19(
     spiking_neuron: callable = None, 
     n_input = [3, 32, 32],
     n_output = 1000,
-    norm_layer = 'tdbn',
+    norm_layer = 'bn',
     **kwargs
 ):
     r"""
@@ -502,7 +502,7 @@ def spiking_resnet18(
     spiking_neuron: callable = None, 
     n_input = [3, 32, 32],
     n_output = 1000,
-    norm_layer = 'tdbn',
+    norm_layer = 'bn',
     **kwargs
 ):
     r"""
@@ -529,7 +529,7 @@ def spiking_resnet34(
     spiking_neuron: callable = None, 
     n_input = [3, 224, 224],
     n_output = 1000,
-    norm_layer = 'tdbn',
+    norm_layer = 'bn',
     **kwargs
 ):
     r"""

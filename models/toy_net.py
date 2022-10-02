@@ -1,12 +1,12 @@
 '''
 Author: ----
 Date: 2022-04-08 11:09:07
-LastEditors: ----
-LastEditTime: 2022-08-30 14:39:48
+LastEditors: GhMa
+LastEditTime: 2022-10-02 19:25:10
 '''
 import torch
 import torch.nn as nn
-from .snn_modules import tdLayer, tdBN
+from .snn_modules import tdLayer, BN
 
 
 class ToyNet(nn.Module):
@@ -23,7 +23,7 @@ class ToyNet(nn.Module):
     ):
         super().__init__()
         if norm_layer is None:
-            norm_layer = tdBN
+            norm_layer = BN
 
         self.layer = tdLayer(
             nn.Flatten(),
