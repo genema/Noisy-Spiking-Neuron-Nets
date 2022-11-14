@@ -208,7 +208,10 @@ def train(epoch, writer, scheduler, args):
             if args.tet:  # use tet loss 
                 loss = TET_loss(out_, targets, criterion, 1.0, args.lambda_tet)
             else:
-                loss = criterion(outputs, targets)
+                loss = 0
+                for tt in range(net.T):
+                    loss += criterion(out_[:, tt, :], targets)
+                loss /= net.T
             loss_ = loss
 
         loss_.backward()
@@ -255,9 +258,13 @@ def test(epoch, writer, path):
             inputs, targets = inputs.to(device), targets.to(device)
             
             net.T = 10
-            outputs = net(inputs).mean(1)
+            out_ = net(inputs)
+            outputs = out_.mean(1)
             
-            loss = criterion(outputs, targets)
+            loss = 0
+            for tt in range(net.T):
+                loss += criterion(out_[:, tt, :], targets)
+            loss /= net.T
 
             test_loss += loss.item()
             _, predicted = outputs.max(1)
