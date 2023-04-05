@@ -16,7 +16,9 @@
 * test scipts: `testing_dataset.py`.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
-### Disclaimer
-* Part of our implementations references those in ***"STCA: Spatio-temporal credit assignment with delayed feedback in deep spiking neural networks." IJCAI. 2019***.
+### Ackowledgement
+* Special thanks to Prof. Penghang Yin (SUNY Albany) and Dr. Seiya Tokui (Preferred Networks, Inc.) for helpful discussions.
+
+### Citation info
 
 
