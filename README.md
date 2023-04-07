@@ -5,6 +5,9 @@
  * @LastEditTime: 2022-10-02 19:35:49
 -->
 # Repo of Noisy Spiking Neural Networks.
+## Repo arch
+* models: neuron models (LIF, Noisy LIF with gaussian, logistic, triangular, uniform noises), networks (residual, vgg, cifarnet)
+
 ## Usage
 
 * modify dataset path in `dataset_utils.py`.
@@ -12,6 +15,7 @@
 
 ### Tips
 * **Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may use noisy networks in your code by importing our  noisy neurons in `models` folder.**
+
 * conf file of our software environment: `requirements.txt`.
 * test scipts: `testing_dataset.py`.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
