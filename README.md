@@ -20,9 +20,9 @@
 * test scipts: `testing_dataset.py`.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
-### Ackowledgement
+## Ackowledgement
 * Special thanks to Prof. Penghang Yin (SUNY Albany) and Dr. Seiya Tokui (Preferred Networks, Inc.) for helpful discussions.
 
-### Citation info
+## Citation info
 
 
