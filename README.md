@@ -4,6 +4,8 @@
  * @LastEditors: GhMa
  * @LastEditTime: 2022-10-02 19:35:49
 -->
+## Project ASGARD: A Spiking-neural-model GARDen
+
 # Repo of Noisy Spiking Neural Networks.
 ## Repo arch
 * models: neuron models (LIF, Noisy LIF with gaussian, logistic, triangular, uniform noises), networks (residual, vgg, cifarnet)
