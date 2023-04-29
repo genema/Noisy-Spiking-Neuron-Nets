@@ -6,7 +6,8 @@
 -->
 # Part of the Project *ASGARD*: A Spiking-neural-model GARDen
 ![Porject ASGARD](https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg)
-# Noisy Spiking Neural Networks
+
+# Noisy Spiking Neural Networks (NSNN)
 ## Repo arch
 * models: neuron models (LIF, Noisy LIF with gaussian, logistic, triangular, uniform noises), networks (residual, vgg, cifarnet)
 
