@@ -6,6 +6,7 @@
 -->
 # Repo. of Noisy Spiking Neural Network (NSNN)
 *  Part of the Project *ASGARD*: A Spiking-neural-model GARDen
+
 ![Porject ASGARD](https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg)
 
 ## Repo arch
