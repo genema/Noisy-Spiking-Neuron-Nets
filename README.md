@@ -6,13 +6,18 @@
 -->
 # Repo. of Noisy Spiking Neural Network (NSNN)
 
-Part of the *ASGARD* PROJECT.
+Part of the __ASGARD* PROJECT__.
 
 ![Porject ASGARD](https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg)
 
 ## Repo arch
--- models
----- neuron models (LIF, Noisy LIF with gaussian, logistic, triangular, uniform noises), networks (residual, vgg, cifarnet)
+- models
+  - neuron models (LIF, Noisy LIF with gaussian, logistic, triangular, uniform noises)
+  - networks (residual, vgg, cifarnet ...)
+- crits
+  - objective functions
+- tools
+  - helpers
 
 ## Usage
 
