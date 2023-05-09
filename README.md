@@ -4,7 +4,7 @@
  * @LastEditors: GhMa
  * @LastEditTime: 2023-05-02 19:35:49
 -->
-# Repo. of Noisy Spiking Neural Network (NSNN)
+# Noisy Spiking Neural Networks
 
 ![Python](https://img.shields.io/badge/Python-3.8.16-brightgreen)
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1-brightgreen)
