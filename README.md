@@ -22,6 +22,9 @@ Part of the __ASGARD PROJECT__
   - objective functions
 - tools
   - helpers
+- conf file of our software environment: `requirements.txt`.
+- test scripts: `testing_(datasetname).py`.
+- train scripts: `main_(datasetname).py`
 
 ## Usage
 
@@ -29,16 +32,12 @@ Part of the __ASGARD PROJECT__
 2. run example commands in `run_training.sh` script to train models. 
 
 ### Tips
-* **Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may use noisy networks in your code by importing our  noisy neurons in `models` folder.**
-
-* conf file of our software environment: `requirements.txt`.
-* test scipts: `testing_dataset.py`.
+* Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may use noisy networks in your code by importing our  noisy neurons in `models` folder.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
 ## Ackowledgement
-
-Special thanks to Prof. Penghang Yin (SUNY Albany) and Dr. Seiya Tokui (Preferred Networks, Inc.) for helpful discussions.
+Special thanks to Prof. Penghang Yin (SUNY Albany) and Dr. Seiya Tokui (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
 
-
+(If I am lucky and the paper gets accepted...)
