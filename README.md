@@ -6,9 +6,13 @@
 -->
 # Repo. of Noisy Spiking Neural Network (NSNN)
 
-Part of the __ASGARD PROJECT__.
+![Python](https://img.shields.io/badge/Python-3.8.16-brightgreen)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1-brightgreen)
+![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
-![Porject ASGARD](https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg)
+Part of the __ASGARD PROJECT__
+
+<img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="256px">
 
 ## Repo arch
 - models
