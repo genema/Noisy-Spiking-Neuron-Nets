@@ -11,9 +11,9 @@
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
 Part of the __ASGARD PROJECT__
-
 <img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="256px">
 
+ [`Paper preprint`](https://arxiv.org/abs/2305.16044) 
 ## Repo arch
 - models
   - neuron models (LIF, Noisy LIF with gaussian, logistic, triangular, uniform noises)
@@ -39,5 +39,14 @@ Part of the __ASGARD PROJECT__
 Special thanks to Prof. Penghang Yin (SUNY Albany) and Dr. Seiya Tokui (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
-
-(If I am lucky and the paper gets accepted...)
+preprint version:
+```bibtex
+@misc{ma2023exploiting,
+      title={Exploiting Noise as a Resource for Computation and Learning in Spiking Neural Networks}, 
+      author={Gehua Ma and Rui Yan and Huajin Tang},
+      year={2023},
+      eprint={2305.16044},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE}
+}
+```
