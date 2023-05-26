@@ -11,6 +11,7 @@
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
 Part of the __ASGARD PROJECT__
+
 <img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="256px">
 
  [`Paper preprint`](https://arxiv.org/abs/2305.16044) 
