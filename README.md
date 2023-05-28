@@ -33,7 +33,7 @@ Part of the __ASGARD PROJECT__
 2. run example commands in `run_training.sh` script to train models. 
 
 ### Tips
-* **It is rather easy to use NSNN by modifying your own code.** Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may refer to (or directly use) noisy networks in your code by importing our  noisy neuron implementations in `models` folder.
+* **It is rather easy to use NSNN by modifying your own code.** Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may refer to (or directly use) our  noisy neuron implementations in `models` folder to build your noisy networks.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
 ## Ackowledgement
