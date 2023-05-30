@@ -9,15 +9,15 @@
 ![Python](https://img.shields.io/badge/Python-3.8.16-brightgreen)
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1-brightgreen)
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
+ [`Paper preprint`](https://arxiv.org/abs/2305.16044) 
 
 Part of the __ASGARD PROJECT__
 
 <img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="256px">
 
- [`Paper preprint`](https://arxiv.org/abs/2305.16044) 
 ## Repo arch
 - models
-  - neuron models (LIF, Noisy LIF with gaussian, logistic, triangular, uniform noises)
+  - neuron models (LIF, Noisy LIF with Gaussian, logistic, triangular, uniform noises)
   - networks (residual, vgg, cifarnet ...)
 - crits
   - objective functions
