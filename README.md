@@ -42,12 +42,10 @@ Special thanks to Prof. Penghang Yin (SUNY Albany) and Dr. Seiya Tokui (Preferre
 ## Citation info
 preprint version:
 ```bibtex
-@misc{ma2023exploiting,
-      title={Exploiting Noise as a Resource for Computation and Learning in Spiking Neural Networks}, 
-      author={Gehua Ma and Rui Yan and Huajin Tang},
-      year={2023},
-      eprint={2305.16044},
-      archivePrefix={arXiv},
-      primaryClass={cs.NE}
+@article{ma2023exploiting,
+  title={Exploiting Noise as a Resource for Computation and Learning in Spiking Neural Networks},
+  author={Ma, Gehua and Yan, Rui and Tang, Huajin},
+  journal={arXiv preprint arXiv:2305.16044},
+  year={2023}
 }
 ```
