@@ -9,6 +9,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8.16-brightgreen)
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1-brightgreen)
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
+
  [`Paper preprint`](https://arxiv.org/abs/2305.16044) 
 
 Part of the __ASGARD PROJECT__
