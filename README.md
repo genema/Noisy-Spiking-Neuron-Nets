@@ -40,7 +40,7 @@
 * **It is rather easy to use NSNN by modifying your own code.** Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may refer to (or directly use) our  noisy neuron implementations in `models` folder to build your noisy networks.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
-## Ackowledgement
+## Acknowledgement
 Special thanks to *Prof. Penghang Yin* (SUNY Albany) and *Dr. Seiya Tokui* (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
