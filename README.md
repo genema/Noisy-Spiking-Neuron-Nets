@@ -4,15 +4,18 @@
  * @LastEditors: GhMa
  * @LastEditTime: 2023-05-02 19:35:49
 -->
-# Noisy Spiking Neural Networks
+# Noisy Spiking Neural Networks 
 
 ![Python](https://img.shields.io/badge/Python-3.8.16-brightgreen)
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1-brightgreen)
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
- [`Paper preprint`](https://arxiv.org/abs/2305.16044) 
-
-Part of the __ASGARD PROJECT__
+ [`Here`](https://arxiv.org/abs/2305.16044)  you can find/get: 
+ - A theoretical frame for SNNs
+ - A biophysical rationale for surrogate gradients 
+ - Implicit regularization in SNNs 
+ - Improved robustness of SNNs
+ - Computational account for the "variability-reliability" in biological neural computation
 
 <img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="256px">
 
@@ -38,7 +41,7 @@ Part of the __ASGARD PROJECT__
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
 ## Ackowledgement
-Special thanks to Prof. Penghang Yin (SUNY Albany) and Dr. Seiya Tokui (Preferred Networks, Inc.) for helpful discussions and suggestions.
+Special thanks to *Prof. Penghang Yin* (SUNY Albany) and *Dr. Seiya Tokui* (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
 preprint version:
