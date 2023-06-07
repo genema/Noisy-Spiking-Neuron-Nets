@@ -17,7 +17,7 @@
  - Improved robustness of SNNs
  - Computational account for the "variability-reliability" in biological neural computation
 
-<img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="256px">
+<img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="240px">
 
 ## Repo arch
 - models
