@@ -4,11 +4,17 @@
  * @LastEditors: GhMa
  * @LastEditTime: 2023-05-02 19:35:49
 -->
+<img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="200px" align="left">
+
 # Noisy Spiking Neural Networks 
 
 ![Python](https://img.shields.io/badge/Python-3.8.16-brightgreen)
+
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1-brightgreen)
+
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
+
+
 
  [`Here`](https://arxiv.org/abs/2305.16044)  you can find/get: 
  - A theoretical frame for SNNs
@@ -17,7 +23,6 @@
  - Improved robustness of SNNs
  - Computational account for the "variability-reliability" in biological neural computation
 
-<img src="https://github.com/genema/Noisy-Spiking-Neuron-Nets/raw/master/proj_logo.jpg" width="240px">
 
 ## Repo arch
 - models
