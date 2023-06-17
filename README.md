@@ -17,11 +17,11 @@
 
 
  [`Here`](https://arxiv.org/abs/2305.16044)  you can find/get: 
- - A theoretical frame for SNNs
- - A biophysical rationale for surrogate gradients 
- - Implicit regularization in SNNs 
- - Improved robustness of SNNs
- - Computational account for the "variability-reliability" in biological neural computation
+ - A theoretical frame for SNNs, induced by re-introducing noisy neuronal dynamics;
+ - A biophysical/mathematical rationale for surrogate gradients (pseudo derivative, derivative approximation);
+ - Implicit regularization in SNNs by incorporating internal noise; 
+ - Improved robustness of SNNs by incorporating internal noise; 
+ - Computational account for the "variability-reliability" in biological neural computation.
 
 
 ## Repo arch
@@ -38,18 +38,18 @@
 
 ## Usage
 
-1. modify dataset path in `dataset_utils.py`.
+1. modify the dataset path in `dataset_utils.py`.
 2. run example commands in `run_training.sh` script to train models. 
 
 ### Tips
-* **It is rather easy to use NSNN by modifying your own code.** Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may refer to (or directly use) our  noisy neuron implementations in `models` folder to build your noisy networks.
+* **It is rather easy to use NSNN by modifying your own code.** Since the inference (by forward) and learning (by backward) implementations are wrapped in the neuron modules, you may refer to (or directly use) our noisy neuron implementations in `models` folder to build your noisy networks.
 * In addition to the Gaussian noise implementation in the text (`NILIF.py`), we provide implementations of discrete models (`NILIF_*.py`) with other random processes (with static increments) corresponding to rectangular, arctangent, and sigmoidal surrogate gradients.
 
 ## Acknowledgement
 Special thanks to *Prof. Penghang Yin* (SUNY Albany) and *Dr. Seiya Tokui* (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
-preprint version:
+A preprint version:
 ```bibtex
 @article{ma2023exploiting,
   title={Exploiting Noise as a Resource for Computation and Learning in Spiking Neural Networks},
