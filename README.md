@@ -15,14 +15,12 @@
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
 
+- A theoretical framework that subsumes conventional deterministic spiking neural networks and surrogate gradients
 
- [`Here`](https://arxiv.org/abs/2305.16044)  you can find/get: 
- - A theoretical frame for SNNs, induced by re-introducing noisy neuronal dynamics;
- - A biophysical/mathematical rationale for surrogate gradients (pseudo derivative, derivative approximation);
- - Implicit regularization in SNNs by incorporating internal noise; 
- - Improved robustness of SNNs by incorporating internal noise; 
- - Computational account for the "variability-reliability" in biological neural computation.
+- Scalable spiking neural models that incorporate noisy neuronal dynamics for implicit regularization, improved robustness, and computational accounts of biological neural computation
 
+## Summary
+Networks of spiking neurons underpin the extraordinary information-processing capabilities of the brain and have emerged as pillar models in neuromorphic intelligence. Despite extensive research on spiking neural networks (SNNs), most are established on deterministic models. Integrating noise into SNNs leads to biophysically more realistic neural dynamics and may benefit model performance. This work presents the noisy spiking neural network (NSNN) and the noise-driven learning rule (NDL) by introducing a spiking neuron model incorporating noisy neuronal dynamics. Our approach shows how noise may serve as a resource for computation and learning and theoretically provides a framework for general SNNs. We show that our method exhibits competitive performance and improved robustness against challenging perturbations than deterministic SNNs and better reproduces probabilistic neural computation in neural coding. This study offers a powerful and easy-to-use tool for machine learning, neuromorphic intelligence practitioners, and computational neuroscience researchers.
 
 ## Repo arch
 - models
@@ -49,7 +47,7 @@
 Special thanks to *Prof. Penghang Yin* (SUNY Albany) and *Dr. Seiya Tokui* (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
-A preprint version:
+A [`preprint version`](https://arxiv.org/abs/2305.16044):
 ```bibtex
 @article{ma2023exploiting,
   title={Exploiting Noise as a Resource for Computation and Learning in Spiking Neural Networks},
