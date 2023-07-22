@@ -15,12 +15,9 @@
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
 
-- A theoretical framework that subsumes conventional deterministic spiking neural networks and surrogate gradients
-
-- Scalable spiking neural models that incorporate noisy neuronal dynamics for implicit regularization, improved robustness, and computational accounts of biological neural computation
 
 ## Summary
-Networks of spiking neurons underpin the extraordinary information-processing capabilities of the brain and have emerged as pillar models in neuromorphic intelligence. Despite extensive research on spiking neural networks (SNNs), most are established on deterministic models. Integrating noise into SNNs leads to biophysically more realistic neural dynamics and may benefit model performance. This work presents the noisy spiking neural network (NSNN) and the noise-driven learning rule (NDL) by introducing a spiking neuron model incorporating noisy neuronal dynamics. Our approach shows how noise may serve as a resource for computation and learning and theoretically provides a framework for general SNNs. We show that our method exhibits competitive performance and improved robustness against challenging perturbations than deterministic SNNs and better reproduces probabilistic neural computation in neural coding. This study offers a powerful and easy-to-use tool for machine learning, neuromorphic intelligence practitioners, and computational neuroscience researchers.
+Networks of spiking neurons underpin the extraordinary information-processing capabilities of the brain and have become pillar models in neuromorphic artificial intelligence. Despite extensive research on spiking neural networks (SNNs), most studies are established on deterministic models, overlooking the inherent non-deterministic, noisy nature of neural computations. This study introduces the noisy spiking neural network (NSNN) and the noise-driven learning rule (NDL) by incorporating noisy neuronal dynamics to exploit the computational advantages of noisy neural processing. NSNN provides a theoretical framework that yields scalable, flexible, and reliable computation and learning. We demonstrate that this framework leads to spiking neural models with competitive performance, improved robustness against challenging perturbations than deterministic SNNs, and better reproducing probabilistic neural computation in neural coding. Generally, this study offers a powerful and easy-to-use tool for machine learning, neuromorphic intelligence practitioners, and computational neuroscience researchers.
 
 ## Repo arch
 - models
