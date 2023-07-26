@@ -24,7 +24,7 @@ class StochasticST(torch.autograd.Function):
         ctx.save_for_backward(input) 
         ctx.mu = mu
         ctx.scale = scale
-        ctx.p_spike = 1 / (1 + torch.exp(-(input - ctx.mu) / ctx.scale))
+        ctx.p_spike = torch.special.expit((input - ctx.mu) / (ctx.scale + 1e-8)).nan_to_num_()
         return torch.bernoulli(ctx.p_spike)
 
     @staticmethod
