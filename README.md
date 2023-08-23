@@ -15,6 +15,10 @@
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
 
+- **News** 🥳🥳 👏👏🏼👏🏾: The model and method in this repo have been implemented and included in the [***snnTorch***](https://github.com/jeshraghian/snntorch) library!
+  Currently, they reside in the [*noisy_leaky*](https://github.com/jeshraghian/snntorch/tree/noisy_leaky) branch and are awaiting subsequent merging into the master branch.
+
+
 
 ## Summary
 Networks of spiking neurons underpin the extraordinary information-processing capabilities of the brain and have become pillar models in neuromorphic artificial intelligence. Despite extensive research on spiking neural networks (SNNs), most studies are established on deterministic models, overlooking the inherent non-deterministic, noisy nature of neural computations. This study introduces the noisy spiking neural network (NSNN) and the noise-driven learning rule (NDL) by incorporating noisy neuronal dynamics to exploit the computational advantages of noisy neural processing. NSNN provides a theoretical framework that yields scalable, flexible, and reliable computation and learning. We demonstrate that this framework leads to spiking neural models with competitive performance, improved robustness against challenging perturbations than deterministic SNNs, and better reproducing probabilistic neural computation in neural coding. Generally, this study offers a powerful and easy-to-use tool for machine learning, neuromorphic intelligence practitioners, and computational neuroscience researchers.
@@ -44,7 +48,7 @@ Networks of spiking neurons underpin the extraordinary information-processing ca
 Special thanks to *Prof. Penghang Yin* (SUNY Albany) and *Dr. Seiya Tokui* (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
-A [`preprint version`](https://arxiv.org/abs/2305.16044):
+A [*preprint version*](https://arxiv.org/abs/2305.16044):
 ```bibtex
 @article{ma2023exploiting,
   title={Exploiting Noise as a Resource for Computation and Learning in Spiking Neural Networks},
