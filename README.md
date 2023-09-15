@@ -15,8 +15,9 @@
 ![PROJASGARD](https://img.shields.io/badge/Project-ASGARD-orange)
 
 
-- **News** 🥳🥳 👏👏🏼👏🏾: The model and method in this repo have been implemented and included in the [***snnTorch***](https://github.com/jeshraghian/snntorch) library!
-  Currently, they reside in the [*noisy_leaky*](https://github.com/jeshraghian/snntorch/tree/noisy_leaky) branch and are awaiting subsequent merging into the master branch.
+- **Update 23-9-14** 🎉: Formal version available at [*Cell.com/Patterns*](https://cell.com/patterns/fulltext/S2666-3899(23)00200-3).
+- **Update 23-8-24** 🎉: The model and method in this repo have been implemented and included in the [***snnTorch***](https://github.com/jeshraghian/snntorch) library.
+  Available at [*link*](https://github.com/jeshraghian/snntorch/tree/noisy_leaky) (awaiting subsequent merge).
 
 
 
@@ -48,12 +49,16 @@ Networks of spiking neurons underpin the extraordinary information-processing ca
 Special thanks to *Prof. Penghang Yin* (SUNY Albany) and *Dr. Seiya Tokui* (Preferred Networks, Inc.) for helpful discussions and suggestions.
 
 ## Citation info
-A [*preprint version*](https://arxiv.org/abs/2305.16044):
+~A [*preprint version*](https://arxiv.org/abs/2305.16044):~
+Formal version available at [*link*](https://cell.com/patterns/fulltext/S2666-3899(23)00200-3)
 ```bibtex
 @article{ma2023exploiting,
   title={Exploiting Noise as a Resource for Computation and Learning in Spiking Neural Networks},
   author={Ma, Gehua and Yan, Rui and Tang, Huajin},
-  journal={arXiv preprint arXiv:2305.16044},
-  year={2023}
+  publisher={Cell Press},
+  journal={Patterns},
+  year={2023},
+  doi={doi.org/10.1016/j.patter.2023.100831},
+  url={cell.com/patterns/fulltext/S2666-3899(23)00200-3},
 }
 ```
